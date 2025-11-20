@@ -92,7 +92,6 @@ async def download_report(task_id: str, format: str = "html"):
             raise HTTPException(status_code=404, detail="Report not found")
 
         # Return file for download
-        from fastapi.responses import FileResponse
         return FileResponse(
             path=report_path,
             filename=f"kaggle_analysis_report_{task_id}.{format}",
