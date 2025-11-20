@@ -5,6 +5,7 @@ import pandas as pd
 
 from app.models.schemas import SubmissionDownloadRequest
 from app.core.config import settings
+from app.api.routes.analysis import active_tasks
 
 router = APIRouter()
 
