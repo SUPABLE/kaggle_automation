@@ -1,10 +1,12 @@
 from fastapi import APIRouter, HTTPException
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 import os
+import pandas as pd
 
 from app.models.schemas import ReportRequest, ReportResponse
 from app.core.config import settings
 from app.services.report import ReportService
+from app.api.routes.analysis import active_tasks
 
 router = APIRouter()
 
